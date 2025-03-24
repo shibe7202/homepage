@@ -2,20 +2,22 @@
     font-family: 'playfair';
     src: url('./Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf'),
         url('./Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf');
-    font-weight: 600;
     font-style: normal;
+    font-weight: 100 600;
 }
 
 @font-face {
     font-family: 'roboto';
     src: url('./Roboto/Roboto-VariableFont_wdth,wght.ttf'),
         url('./Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf');
-    font-weight: 600;
     font-style: normal;
+    font-weight: 100 600;
 }
 
 :root {
+    --main-bg-color2: #ee3c68;
     --main-bg-color: oklch(0.609 0.126 221.723);
+
 }
 
 * {
@@ -26,22 +28,83 @@
 
 header {
     height: 500px;
-    background-color: aliceblue;
+   /* background-color: aliceblue; */
 }
 
 div.slant {
-    height: 105%;
+    height: 130%;
     position: relative;
     z-index: 0;
-    top: -230px;
-    transform: skewY(-9deg);
+    top: -715px;
+    transform: skewY(-10deg);
     background-color: var(--main-bg-color);
+   /* box-shadow: 10px 5px 5px oklch(0.928 0.006 264.531); */
+    box-shadow: rgba(22, 22, 22, 0.24) 5px 5px 8px;
 }
 
 div.header-items {
+    height: 100%;
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 55px;
 }
+
+div.header-img {
+    width: 440px;
+    height: 460px;
+    background-image: url('work-photo1.jpg');
+    background-size: cover;
+    background-position: 35% 25%;
+    box-shadow: rgba(22, 22, 22, 0.24) 4px 4px 5px;
+    z-index: 1;
+}
+
+p.name {
+    font-family: playfair;
+    font-size: 16px;
+    color: white;
+}
+
+div.about-me-container {
+    max-width: 570px;
+    height: 370px;
+    margin-top: 10px;
+    padding: 12px 40px 14px 25px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgba(70, 70, 70, 0.24) 4px 4px 5px;
+    z-index: 0;
+}
+
+h1.about-me {
+    font-family: playfair;
+    font-weight: 450;
+    font-size: 37px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+p.about-me {
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 19px;
+    color: oklch(0.52 0 0);
+    line-height: 1.7rem;
+    padding-bottom: 16px;
+}
+
+ div.icon-row.about-me {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 0px 0px 0px 0px;
+ }
+
 
 main {
     height: 900px;
@@ -52,16 +115,9 @@ footer {
     background-color:var(--main-bg-color);
 }
 
-.photo1 {
-    max-width: 250px;
-}
-
-.photo2 {
-    max-width: 330px;
-}
-
 .icon {
-    width: 25px;
+    width: 32px;
+    height: 32px;
 }
 
 .other-icon {
