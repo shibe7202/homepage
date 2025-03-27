@@ -69,10 +69,10 @@ p.name {
 }
 
 div.about-me-container {
-    max-width: 570px;
+    max-width: 560px;
     height: 370px;
-    margin-top: 10px;
-    padding: 12px 40px 14px 25px;
+    margin-top: 15px;
+    padding: 12px 30px 14px 20px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -102,12 +102,114 @@ p.about-me {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
-    padding: 0px 0px 0px 0px;
  }
 
 
 main {
-    height: 900px;
+    margin: 85px 455px;
+}
+
+main > h1 {
+    font-family: playfair;
+    font-weight: 450;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.projects-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 310px);
+    gap: 35px;
+    row-gap: 42px;
+
+}
+
+.project {
+    width: 300px;
+    height: 370px;
+    background-color: white;
+    box-shadow: 2px 2px 7px 2px rgba(70, 70, 70, 0.24)
+}
+
+.screenshot {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+.screenshot.one {
+    background-color: rgb(146, 18, 18);
+}
+
+.screenshot.two {
+    background-color:rgb(136, 119, 233)
+}
+
+.screenshot.three {
+    background-color: rgb(30, 146, 82);
+}
+
+.screenshot.four {
+    background-color: rgb(211, 89, 180);
+}
+
+.screenshot.five {
+    background-color: rgb(202, 142, 31);
+}
+
+.screenshot.six {
+    background-color: rgb(27, 148, 196);
+}
+
+
+.screenshot > h1 {
+    font-family: playfair;
+    font-weight: 450;
+    font-size: 37px;
+    color: white;
+    text-align: center;
+}
+
+.project-about {
+    width: 100%;
+    padding: 8px 21px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.project-name > h1 {
+    font-family: playfair;
+    font-size: 19px;
+    font-weight: 300;
+}
+
+.icon-row.projects {
+    width: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.icon-row.projects > .icon {
+    width: 20px;
+    height: 20px;
+
+}
+
+p.project-description {
+    font-family: roboto;
+    font-size: 15px;
+    color: oklch(0.52 0 0);
 }
 
 footer {
@@ -123,4 +225,18 @@ footer {
 .other-icon {
     width: 20px;
     height: 20px
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 25px 5px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    main {
+        margin: 25px 30px
+    }
+
 }
