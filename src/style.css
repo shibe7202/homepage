@@ -17,7 +17,6 @@
 :root {
     --main-bg-color2: #ee3c68;
     --main-bg-color: oklch(0.609 0.126 221.723);
-
 }
 
 * {
@@ -28,7 +27,6 @@
 
 body {
     background-color: oklch(0.998 0.002 247.839);
-
 }
 
 header {
@@ -42,9 +40,9 @@ div.slant {
     top: -715px;
     transform: skewY(-10deg);
     background-color: var(--main-bg-color);
-   /* box-shadow: 10px 5px 5px oklch(0.928 0.006 264.531); */
     box-shadow: rgba(22, 22, 22, 0.24) 5px 5px 8px;
 }
+
 
 div.header-items {
     height: 100%;
@@ -73,7 +71,7 @@ p.name {
     position: relative;
     top: 86%;
     left: 5%;
-    text-shadow: 1px 1px 7px rgb(110, 110, 110);
+    text-shadow: 1px 2px 5px rgb(110, 110, 110);
 }
 
 div.about-me-container {
@@ -114,10 +112,16 @@ p.about-me {
 
 
 main {
-    margin: 85px 455px 105px 455px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 85px 0px 105px 0px;
 }
 
 main > h1 {
+    width: 1000px;
     font-family: playfair;
     font-weight: 450;
     font-size: 38px;
@@ -125,12 +129,12 @@ main > h1 {
 }
 
 .projects-container {
-    width: 100%;
+    max-width: 1100px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 310px);
+    justify-content: center;
     gap: 35px;
     row-gap: 42px;
-
 }
 
 .project {
@@ -211,7 +215,6 @@ main > h1 {
 .icon-row.projects > .icon {
     width: 20px;
     height: 20px;
-
 }
 
 p.project-description {
@@ -221,22 +224,23 @@ p.project-description {
 }
 
 footer {
-    height: 520px;
+    height: auto;
     background-color:var(--main-bg-color);
     color: oklch(0.985 0 0);
     padding: 55px 455px; 
     display: flex;
-    justify-content:space-around;
+    justify-content: center;
     gap: 25px;
 }
 
 .contact-me {
+    max-width: 400px;
     padding: 0px 30px 0px 0px;
 }
 
 .contact {
     font-family: playfair;
-    font-weight: 410;
+    font-weight: 400;
     font-size: 37px;
     padding-top: 0px;
     padding-bottom: 5px;
@@ -255,7 +259,7 @@ footer p {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: 15px;
+    margin-top: 13px;
 }
 
 .email {
@@ -272,19 +276,20 @@ footer p {
 }
 
 .footer-img {
-    width: 560px;
+    min-width: 560px; 
     height: 410px;
     background-image: url('work-photo2.jpg');
     background-size: cover;
+    margin: 0px;
 }
 
 .icon-row.footer {
-    margin-top: 23px;
+    margin-top: 28px;
 }
 
 .icon-row.footer > .icon {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
     margin-right: 15px;
 }
 
@@ -293,16 +298,261 @@ footer p {
     height: 32px;
 }
 
-@media (max-width: 600px) {
-    main {
-        margin: 25px 5px;
+
+@media (max-width: 1200px) and (min-width: 901px) {
+    header {
+        height: 700px;
     }
 
+    p.name {
+        font-size: 49px;
+        width: 500px;
+        top: 2%;
+        left: 92%;        
+    }
+
+    div.header-items {
+        display: block flow;
+        margin: 0 12% 0 15%;
+    }
+
+    div.header-img {
+        width: 340px;
+        height: 350px;
+        display: inline-block;
+        position: relative;
+    }
+
+    div.about-me-container {
+        display: inline-block;
+        width: 620px;
+        height: 430px;
+        position: relative;
+        left: 10%;
+        top: -43%;
+        padding: 35px 10px 20px 20px;
+    }
+
+    h1.about-me:before {
+        content: "";
+        width: 270px;
+        height: 225px;
+        float: left;
+        visibility: hidden;
+    }
+
+    h1.about-me {
+        font-size: 34px;
+        padding-top: 25px;
+        padding-bottom: 18px;
+        text-align: center;
+    }
+
+    div.icon-row.about-me {
+        display: none;
+    }
+
+    div.slant {
+        top: -1225px;
+    }
+
+    main {
+        margin: -110px 0px 90px 0px;
+    }
+
+    main > h1 {
+        width: 510px;
+        text-align: center;
+    }
+
+    .projects-container {
+        max-width: 800px;
+        justify-content: center;
+    }
+
+    footer {
+        padding: 40px 18px 40px 18px;
+    }
+
+    .contact {
+        padding-top: 40px;
+    }
+
+    .footer-img {
+        min-width: 250px;
+        background-size: cover;
+        background-position: 13% 0%;
+    }
 }
 
-@media (max-width: 1200px) {
-    main {
-        margin: 25px 30px
+@media (max-width: 900px) and (min-width: 701px) {
+    header {
+        height: 700px;
     }
 
+    p.name {
+        font-size: 49px;
+        width: 500px;
+        top: 2%;
+        left: 85%;        
+    }
+
+    div.header-items {
+        display: block flow;
+        margin: 0 7%;
+    }
+
+    div.header-img {
+        width: 340px;
+        height: 350px;
+        display: inline-block;
+        position: relative;
+    }
+
+    div.about-me-container {
+        display: inline-block;
+        width: 620px;
+        height: 430px;
+        position: relative;
+        left: 10%;
+        top: -43%;
+        padding: 35px 10px 20px 20px;
+    }
+
+    h1.about-me:before {
+        content: "";
+        width: 270px;
+        height: 225px;
+        float: left;
+        visibility: hidden;
+    }
+
+    h1.about-me {
+        font-size: 34px;
+        padding-top: 25px;
+        padding-bottom: 18px;
+        text-align: center;
+    }
+
+    div.icon-row.about-me {
+        display: none;
+    }
+
+    div.slant {
+        top: -1225px;
+    }
+
+    main {
+        margin: -110px 0px 90px 0px;
+    }
+
+    main > h1 {
+        width: 510px;
+        text-align: center;
+    }
+
+    .projects-container {
+        max-width: 800px;
+        justify-content: center;
+    }
+
+    footer {
+        padding: 40px 18px 40px 18px;
+    }
+
+    .contact {
+        padding-top: 40px;
+    }
+
+    .footer-img {
+        min-width: 250px;
+        background-size: cover;
+        background-position: 13% 0%;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        height: 1000px;
+    }
+    div.header-items {
+        flex-direction: column;
+    }
+
+    div.header-img {
+        width: 90%;
+    }
+
+    p.name {
+        font-size: 49px;
+        width: 60%;
+        top: 70%;
+    }
+
+    div.about-me-container {
+        height: auto;
+        box-shadow: none;
+        margin-top: 10px;
+    }
+
+    h1.about-me {
+        text-align: center;
+        padding-bottom: 8px;
+    }
+
+    div.icon-row.about-me {
+        justify-content: center;
+    }
+
+    div.slant {
+        top: -1150px;
+        height: 600px;
+        transform: skewY(-11deg);
+    }
+
+    main {
+        margin: 25px 0px 90px 0px;
+    }
+
+    main > h1 {
+        width: 310px;
+        text-align: center;
+    }
+
+    .projects-container {
+        max-width: 600px;
+        justify-content: center;
+    }
+
+    footer {
+        padding: 23px 18px 0px 18px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .contact-me {
+        padding-bottom: 45px;
+    }
+
+    .contact {
+        text-align: center;
+        font-size: 40px;
+        padding-bottom: 12px;
+    }
+
+    .email > p, .phone > p {
+        font-size: 14px;
+    }
+
+    .icon-row.footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-img {
+        min-width: 140%;
+        min-height: 400px;
+    }
 }
